@@ -1,5 +1,3 @@
-Este archivo contiene instrucciones y descripciones sobre cómo utilizar y trabajar con este proyecto.
-
 # Ejecutar el proyecto
 
 Para ejecutar el proyecto, sigue los siguientes pasos:
@@ -8,17 +6,23 @@ Clona el proyecto en tu máquina local.
 
 Ejecuta el siguiente comando para construir la imagen de Docker:
 
-### docker build -t app .
+```
+docker build -t app .
+```
 
 Luego, ejecuta el siguiente comando para ejecutar el contenedor Docker:
 
 ## PowerShell o Linux:
 
-### docker run -it -v ${PWD}:/output app
+```
+docker run -it -v ${PWD}:/output app
+```
 
 ## Windows CMD:
 
-### docker run -it -v %cd%:/output app
+```
+docker run -it -v %cd%:/output app
+```
 
 # Scripts disponibles
 
@@ -28,7 +32,9 @@ El script **generar.sh** genera imágenes basadas en un número pasado como argu
 
 Uso del script:
 
-### ./generar.sh <número>
+```
+./generar.sh <número>
+```
 
 ## descomprimir.sh
 
@@ -36,7 +42,10 @@ El script **descomprimir.sh** recibe dos parámetros: la ruta de un archivo de i
 
 Uso del script:
 
-### ./descomprimir.sh <ruta_archivo_imágenes> <suma_verificación>
+```
+./descomprimir.sh <ruta_archivo_imágenes> <suma_verificación>
+```
+
 
 ## procesar.sh
 
@@ -44,7 +53,9 @@ El script **procesar.sh** recibe como parámetro un directorio de imágenes y la
 
 Uso del script:
 
-### ./procesar.sh <directorio_imágenes>
+```
+./procesar.sh <directorio_imágenes>
+```
 
 ## comprimir.sh
 
@@ -57,4 +68,6 @@ Genera un archivo comprimido que incluye los archivos generados anteriormente y 
 
 Uso del script:
 
-### ./comprimir.sh
+```
+./comprimir.sh
+```
