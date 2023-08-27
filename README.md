@@ -1,53 +1,54 @@
 Este archivo contiene instrucciones y descripciones sobre cómo utilizar y trabajar con este proyecto.
 
-Levantar el proyecto
-Para levantar el proyecto, sigue los siguientes pasos:
+# Ejecutar el proyecto
+
+Para ejecutar el proyecto, sigue los siguientes pasos:
 
 Clona el proyecto en tu máquina local.
 
 Ejecuta el siguiente comando para construir la imagen de Docker:
 
-docker build -t app .
+### docker build -t app .
 
 Luego, ejecuta el siguiente comando para ejecutar el contenedor Docker:
 
-PowerShell o Linux:
+## PowerShell o Linux:
 
-docker run -it -v ${PWD}:/output app
+### docker run -it -v ${PWD}:/output app
 
-Windows CMD:
+## Windows CMD:
 
-docker run -it -v %cd%:/output app
+### docker run -it -v %cd%:/output app
 
-Scripts disponibles
+# Scripts disponibles
 
-generar.sh
+## generar.sh
 
-El script generar.sh genera imágenes basadas en un número pasado como argumento. Las imágenes generadas se guardan en un archivo llamado img_generadas.tar, y también se genera y guarda la suma de verificación en el archivo suma_verificacion.txt.
-
-Uso del script:
-
-./generar.sh <número>
-
-descomprimir.sh
-
-El script descomprimir.sh recibe dos parámetros: la ruta de un archivo de imágenes a descomprimir y su suma de verificación. El script valida los datos y luego extrae las imágenes descomprimidas en un directorio llamado imagenes_extraidas.
+El script **generar.sh** genera imágenes basadas en un número pasado como argumento. Las imágenes generadas se guardan en un archivo llamado **img_generadas.tar**, y también se genera y guarda la suma de verificación en el archivo **suma_verificacion.txt**.
 
 Uso del script:
 
-./descomprimir.sh <ruta_archivo_imágenes> <suma_verificación>
+### ./generar.sh <número>
 
-procesar.sh
+## descomprimir.sh
 
-El script procesar.sh recibe como parámetro un directorio de imágenes y las comprime.
+El script **descomprimir.sh** recibe dos parámetros: la ruta de un archivo de imágenes a descomprimir y su suma de verificación. El script valida los datos y luego extrae las imágenes descomprimidas en un directorio llamado **imagenes_extraidas**.
 
 Uso del script:
 
-./procesar.sh <directorio_imágenes>
+### ./descomprimir.sh <ruta_archivo_imágenes> <suma_verificación>
 
-comprimir.sh
+## procesar.sh
 
-El script comprimir.sh realiza las siguientes acciones:
+El script **procesar.sh** recibe como parámetro un directorio de imágenes y las comprime.
+
+Uso del script:
+
+### ./procesar.sh <directorio_imágenes>
+
+## comprimir.sh
+
+El script **comprimir.sh** realiza las siguientes acciones:
 
 Genera un archivo con la lista de nombres de todas las imágenes.
 Genera un archivo con la lista de nombres válidos.
@@ -56,4 +57,4 @@ Genera un archivo comprimido que incluye los archivos generados anteriormente y 
 
 Uso del script:
 
-./comprimir.sh
+### ./comprimir.sh
