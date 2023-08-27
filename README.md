@@ -8,6 +8,7 @@ Clona el proyecto en tu máquina local.
 Ejecuta el siguiente comando para construir la imagen de Docker:
 
 docker build -t app .
+
 Luego, ejecuta el siguiente comando para ejecutar el contenedor Docker:
 
 PowerShell o Linux:
