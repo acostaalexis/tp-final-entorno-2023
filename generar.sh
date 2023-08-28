@@ -1,22 +1,10 @@
 #!/bin/bash
+#obtengo la lista de nombres recomendda por la catedra
 url_list_name="https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv"
-# Función para generar un nombre aleatorio de la lista de nombres de personas
 list_name=$(wget -qO- "$url_list_name" | awk  -F ' ' '{print $1}')
-# echo "$list_name"
-
 IFS=$'\n' read -d '' -ra lista_nombres <<< "$list_name"
 
-
-
-random_index=$((RANDOM % ${#lista_nombres[@]}))
-echo "${lista_nombres[random_index]}"
-
-names=("Paz" "Marcos" "Federico" "Juan" "Eve" "Laura" "Joaquin" "Ailen" "Bruno" "Roman" "Gonzalo" "Valeria")
-echo "$names"
-
-
-
-
+# Función para generar un nombre aleatorio de la lista de nombres de personas
 generate_random_name() {
   random_index=$((RANDOM % ${#lista_nombres[@]}))
   echo "${lista_nombres[random_index]}"
